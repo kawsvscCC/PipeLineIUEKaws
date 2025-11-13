@@ -1,0 +1,22 @@
+{
+    "family": "ecs-demo-app",
+    "networkMode": "bridge",
+    "containerDefinitions": [
+      {
+        "name": "myapp-container",
+        "image": "676661913161.dkr.ecr.us-east-2.amazonaws.com/ecs-demo:latest",
+        "essential": true,
+        "portMappings": [
+          {
+            "containerPort": 80,
+            "hostPort": 0,
+            "protocol": "tcp"
+          }
+        ]
+      }
+    ],
+    "requiresCompatibilities": ["EC2"],
+    "cpu": "256",
+    "memory": "128"
+  }
+  
