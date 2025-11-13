@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       - docker push $IMAGE_URI
-      - printf '[{"name":"app","imageUri":"%s"}]' $IMAGE_URI > imagedefinitions.json
+      - printf '[{"name":"Img1","imageUri":"%s"}]' $IMAGE_URI > imagedefinitions.json
 artifacts:
   files:
     - imagedefinitions.json
